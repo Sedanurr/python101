@@ -1,0 +1,16 @@
+from typing import List, Any, Iterable
+
+
+def flatten_recursive(lst):
+    for item in lst:
+        if isinstance(item, list):
+            yield from flatten_recursive(item)
+        else:
+            yield item
+2.soru
+
+liste = [[1, 2], [3, 4], [5, 6, 7]]
+for i in liste:
+    for j in i:
+        liste.sort(reverse=True)
+print(liste)
